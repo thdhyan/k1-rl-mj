@@ -1,0 +1,36 @@
+[project]
+name = "k1-rl-mj"
+version = "0.1.0"
+description = "mjlab (MuJoCo Warp) tasks, probes and train/play CLI."
+requires-python = ">=3.10"
+dependencies = [
+  "imageio",
+  "matplotlib",
+  "mujoco",
+  "numpy",
+  "pillow",
+  "torch",
+  "k1-common",
+  "k1-utils",
+  "k1-runtime",
+  "mjlab",
+]
+
+[project.scripts]
+k1-train = "mjlab_k1.cli:train"
+k1-play = "mjlab_k1.cli:play"
+
+[tool.uv.sources]
+k1-common = { git = "https://github.com/thdhyan/k1-common" }
+k1-utils = { git = "https://github.com/thdhyan/k1-utils" }
+k1-runtime = { git = "https://github.com/thdhyan/k1-runtime" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mjlab_k1"]
+
+# Provided by the environment (ROS 2, Isaac Sim/Lab, mjlab, robot SDK) or not on PyPI under this name:
+# mjlab, rsl_rl, tensordict, ultralytics
