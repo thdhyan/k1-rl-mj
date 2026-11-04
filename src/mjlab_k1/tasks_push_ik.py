@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import math
 import os
-from pathlib import Path
 from dataclasses import dataclass, replace
 
 import torch
@@ -33,6 +32,8 @@ from mjlab.sensor import ContactMatch, ContactSensorCfg
 from mjlab.tasks.velocity import mdp
 from mjlab.utils.lab_api.math import quat_apply, quat_apply_inverse, yaw_quat
 
+from k1_common.paths import model
+
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
 from mjlab_k1.k1_constants import ARM_REGEX, HAND_BODIES
@@ -42,7 +43,7 @@ from .upper_body import RandomUpperBodyActionCfg
 from k1_runtime.wbc import ArmIK, JOINTS
 
 BASE_CKPT = os.environ.get(
-  "K1_PIK_BASE", str(Path(__file__).resolve().parents[3] / "models/mjlab_k1/walk_still_v2/model_8998.pt"))
+  "K1_PIK_BASE", str(model("mjlab_k1/walk_still_v2/model_8998.pt")))
 # half depth, half width, half height (m); K1_PIK_HALF_Z="lo,hi" overrides the half height range
 SIZE_RANGE = ((0.2, 0.35), (0.4, 0.75), tuple(float(v) for v in os.environ.get("K1_PIK_HALF_Z", "0.15,0.3").split(",")))
 # mass = 8 kg * exp(2 alpha) = 2 .. 5 kg, so drag <= 29 N: scripted hand pushing stalls above ~35 N (scripts/push_ik_probe.py)

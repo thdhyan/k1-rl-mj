@@ -8,7 +8,6 @@ upper-body driver for now (head tracking is a separate layer).
 from __future__ import annotations
 
 import os
-from pathlib import Path
 
 import mujoco
 import torch
@@ -24,6 +23,8 @@ from mjlab.managers.termination_manager import TerminationTermCfg
 from mjlab.tasks.velocity import mdp
 from mjlab.utils.lab_api.math import quat_apply_inverse, yaw_quat
 
+from k1_common.paths import model
+
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
 from .upper_body import RandomUpperBodyActionCfg
@@ -32,7 +33,7 @@ FIELD_L, GOAL_W, GOAL_H = 8.0, 2.0, 0.9
 BALL_RADIUS, BALL_MASS = 0.11, 0.43
 GOAL_POS = (FIELD_L / 2, 0.0, GOAL_H / 2)
 BASE_CKPT = os.environ.get(
-  "K1_BASE_CKPT", str(Path(__file__).resolve().parents[3] / "models/mjlab_k1/flat_swing10/model_4999.pt"))
+  "K1_BASE_CKPT", str(model("mjlab_k1/flat_swing10/model_4999.pt")))
 
 
 def ball_spec() -> mujoco.MjSpec:

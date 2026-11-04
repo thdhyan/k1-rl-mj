@@ -29,7 +29,6 @@ from __future__ import annotations
 import math
 import os
 from dataclasses import replace
-from pathlib import Path
 
 import mujoco
 import torch
@@ -46,6 +45,8 @@ from mjlab.tasks.velocity import mdp
 from mjlab.utils.lab_api.math import quat_apply_inverse, yaw_quat
 
 from .ball_gaze import attach_ball_gaze
+from k1_common.paths import model
+
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
 from mjlab_k1.k1_constants import get_k1_robot_cfg
@@ -54,7 +55,7 @@ from .upper_body import RandomUpperBodyActionCfg
 
 AGENTS = ("robot_a", "robot_b")
 BASE_CKPT = os.environ.get(
-  "K1_KMA_BASE", str(Path(__file__).resolve().parents[3] / "models/mjlab_k1/walk_still_v4/model_18996.pt"))
+  "K1_KMA_BASE", str(model("mjlab_k1/walk_still_v4/model_18996.pt")))
 CMD_ALPHA = float(os.environ.get("K1_KMA_CMD_ALPHA", "0.3"))  # kick_dir_v1 was trained with 0.3
 
 PITCH_X, PITCH_Y = 4.0, 3.0                  # touch lines and goal line (+x), m, half sizes

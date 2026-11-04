@@ -11,6 +11,7 @@ dependencies = [
   "pillow",
   "torch",
   "k1-common",
+  "k1-description",
   "k1-utils",
   "k1-runtime",
   "mjlab",
@@ -22,6 +23,7 @@ k1-play = "mjlab_k1.cli:play"
 
 [tool.uv.sources]
 k1-common = { git = "https://github.com/thdhyan/k1-common" }
+k1-description = { git = "https://github.com/thdhyan/k1-description" }
 k1-utils = { git = "https://github.com/thdhyan/k1-utils" }
 k1-runtime = { git = "https://github.com/thdhyan/k1-runtime" }
 
