@@ -25,7 +25,7 @@ from mjlab.utils.lab_api.math import quat_apply, quat_apply_inverse
 
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
-from k1_common.k1_constants import ARM_REGEX
+from mjlab_k1.k1_constants import ARM_REGEX
 from .tasks_kick import BALL_RADIUS, BASE_CKPT, ball_spec
 from .upper_body import RandomUpperBodyActionCfg
 

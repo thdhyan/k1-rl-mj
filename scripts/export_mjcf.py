@@ -10,7 +10,7 @@ import sys
 
 from mjlab.entity import Entity
 
-from k1_common.k1_constants import K1_XML, get_k1_robot_cfg
+from mjlab_k1.k1_constants import K1_XML, get_k1_robot_cfg
 
 arms = "--arms" in sys.argv
 solid = "--all" in sys.argv

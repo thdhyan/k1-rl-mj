@@ -26,7 +26,7 @@ from mjlab.managers.termination_manager import TerminationTermCfg
 from mjlab.sensor import ContactMatch, ContactSensorCfg
 from mjlab.tasks.velocity import mdp
 
-from k1_common.k1_constants import HAND_BODIES
+from mjlab_k1.k1_constants import HAND_BODIES
 from .tasks_carry import (BOX_DEPTH, BOX_HEIGHT, GEO, SUCCESS_R, VIS_INSET, _goal_dist, _state, add_welds,
                           box_err_b, carry_env_cfg, hold_quality)
 from .tasks_kick import failure_terminated

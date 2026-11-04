@@ -8,7 +8,7 @@ import mjlab_k1  # noqa: F401
 from mjlab.envs import ManagerBasedRlEnv
 from mjlab.rl import RslRlVecEnvWrapper
 from mjlab.tasks.registry import load_env_cfg, load_rl_cfg, load_runner_cls
-from k1_common.k1_constants import K1_ACTION_SCALE, K1_ACTUATORS, LEG_REGEX
+from mjlab_k1.k1_constants import K1_ACTION_SCALE, K1_ACTUATORS, LEG_REGEX
 
 task, ckpt, out = sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3])
 out.mkdir(parents=True, exist_ok=True)

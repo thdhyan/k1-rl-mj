@@ -24,7 +24,7 @@ from mjlab.tasks.velocity import mdp
 from mjlab.utils.lab_api.math import quat_from_euler_xyz
 
 from .env_cfg import k1_velocity_env_cfg
-from k1_common.k1_constants import K1_ACTION_SCALE, get_k1_getup_robot_cfg
+from mjlab_k1.k1_constants import K1_ACTION_SCALE, get_k1_getup_robot_cfg
 
 STAND_FRAC = float(os.environ.get("K1_GETUP_STAND_FRAC", "0.15"))
 JOINT_NOISE = 0.6          # rad, uniform around HOME for fallen resets

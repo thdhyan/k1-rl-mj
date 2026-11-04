@@ -21,7 +21,7 @@ from mjlab.tasks.velocity import mdp
 
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
-from k1_common.k1_constants import ARM_REGEX, LEG_REGEX
+from mjlab_k1.k1_constants import ARM_REGEX, LEG_REGEX
 from .tasks_carry2 import carry2_env_cfg
 from .tasks_kick import BASE_CKPT
 from .tasks_skills import residual_l2

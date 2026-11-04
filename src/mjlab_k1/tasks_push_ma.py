@@ -32,7 +32,7 @@ from mjlab.utils.spec_config import CollisionCfg
 
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
-from k1_common.k1_constants import _FOOT, ARM_REGEX, HAND_BODIES, get_getup_spec, get_k1_manip_robot_cfg
+from mjlab_k1.k1_constants import _FOOT, ARM_REGEX, HAND_BODIES, get_getup_spec, get_k1_manip_robot_cfg
 from .tasks_kick import BASE_CKPT, failure_terminated
 from .upper_body import RandomUpperBodyActionCfg
 

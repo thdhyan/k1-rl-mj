@@ -35,7 +35,7 @@ from mjlab.tasks.velocity import mdp
 
 from .env_cfg import SITES, k1_velocity_env_cfg
 from .frozen_base import FrozenBaseAction, FrozenBaseActionCfg
-from k1_common.k1_constants import K1_ACTUATORS, LEG_REGEX
+from mjlab_k1.k1_constants import K1_ACTUATORS, LEG_REGEX
 from .tasks_kick import BASE_CKPT, failure_terminated
 from .upper_body import RandomUpperBodyActionCfg
 

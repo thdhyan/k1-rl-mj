@@ -20,7 +20,7 @@ from mjlab.sensor import (
 from mjlab.tasks.velocity.mdp import UniformVelocityCommandCfg
 from mjlab.tasks.velocity.velocity_env_cfg import make_velocity_env_cfg
 
-from k1_common.k1_constants import K1_ACTION_SCALE, LEG_REGEX, get_k1_robot_cfg
+from mjlab_k1.k1_constants import K1_ACTION_SCALE, LEG_REGEX, get_k1_robot_cfg
 from .upper_body import RandomUpperBodyActionCfg
 
 SITES = ("left_foot", "right_foot")

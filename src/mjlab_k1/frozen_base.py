@@ -19,7 +19,7 @@ from mjlab.managers.scene_entity_config import SceneEntityCfg
 
 from mjlab.tasks.velocity import mdp
 
-from k1_common.k1_constants import K1_ACTION_SCALE, LEG_REGEX
+from mjlab_k1.k1_constants import K1_ACTION_SCALE, LEG_REGEX
 from k1_runtime.wbc import H_STAND, load_frozen_mlp
 
 if TYPE_CHECKING:

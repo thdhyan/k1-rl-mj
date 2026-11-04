@@ -35,7 +35,7 @@ from mjlab.utils.lab_api.math import quat_apply, quat_apply_inverse, yaw_quat
 
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
-from k1_common.k1_constants import ARM_REGEX, HAND_BODIES
+from mjlab_k1.k1_constants import ARM_REGEX, HAND_BODIES
 from .tasks_kick import failure_terminated
 from .tasks_push_ma import AGENTS, box_spec, robot_cfg
 from .upper_body import RandomUpperBodyActionCfg

@@ -3,7 +3,7 @@ import mjlab_k1  # noqa: F401
 from mjlab.envs import ManagerBasedRlEnv
 from mjlab.tasks.registry import load_env_cfg
 from mjlab.tasks.velocity import mdp
-from k1_common.k1_constants import LEG_REGEX
+from mjlab_k1.k1_constants import LEG_REGEX
 
 cfg = load_env_cfg("Mjlab-Velocity-Flat-Booster-K1", play=True)
 cfg.scene.num_envs = 4

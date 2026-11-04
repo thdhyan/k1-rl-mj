@@ -48,7 +48,7 @@ from mjlab.utils.lab_api.math import quat_apply_inverse, yaw_quat
 from .ball_gaze import attach_ball_gaze
 from .env_cfg import k1_velocity_env_cfg
 from .frozen_base import FrozenBaseActionCfg
-from k1_common.k1_constants import get_k1_robot_cfg
+from mjlab_k1.k1_constants import get_k1_robot_cfg
 from .tasks_kick import BALL_RADIUS, GOAL_H, GOAL_POS, GOAL_W, ball_spec, failure_terminated
 from .upper_body import RandomUpperBodyActionCfg
 
