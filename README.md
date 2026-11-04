@@ -9,6 +9,24 @@ mjlab (MuJoCo Warp) tasks, probes and train/play CLI.
 | Files / LOC | 75 files · 7,576 lines (py, sh, cpp) |
 | Part of | [k1-workspace](https://github.com/thdhyan/k1-workspace) (architecture and layering rules live there) |
 
+## Where it sits
+
+```mermaid
+flowchart TB
+  k1_common[k1-common]
+  k1_utils[k1-utils]
+  k1_runtime[k1-runtime]
+  k1_rl_mj((k1-rl-mj))
+  style k1_rl_mj fill:#e8833a,color:#000
+  k1_rl_mj --> k1_common
+  k1_rl_mj --> k1_utils
+  k1_rl_mj --> k1_runtime
+```
+
+Used by: nothing (top layer).
+
+![k1-workspace layers](https://raw.githubusercontent.com/thdhyan/k1-workspace/main/docs/img/architecture.png)
+
 ## Install
 
 ```bash
@@ -20,6 +38,7 @@ uv sync
 ## Layout
 
 ```
+README.md
 jobs/  (7 files)
   README.md
   dl_grid_carry.sh
