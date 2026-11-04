@@ -10,6 +10,7 @@ Part of [k1-rl-mj](https://github.com/thdhyan/k1-rl-mj).
 | `depth_encoder.py` | Frozen ResNet18 (ImageNet weights) for depth images, up to layer3, so the feature map keeps where things are in the image. |
 | `env_cfg.py` | K1 decoupled lower-body velocity tracking on mjlab: AGILE-style, small reward set. |
 | `frozen_base.py` | Frozen lower-body policy as an action term: the HRL 'actuator' for every layer above it. |
+| `k1_constants.py` | Booster K1 (22 DoF) for mjlab. |
 | `marl.py` | Multi-agent PPO with parameter sharing (MAPPO-style CTDE) on the single-agent rsl-rl runner. |
 | `tasks_carry.py` | Box carry (port of Isaac Lab `Isaac-Carry-K1-v0`, carry v1) on mjlab: an HRL task layer with arms. |
 | `tasks_carry2.py` | Box carry v2: no weld. The box is a free, colliding body held only by the forearm stubs squeezing its sides. |
