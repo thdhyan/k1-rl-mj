@@ -16,6 +16,7 @@ Part of [k1-rl-mj](https://github.com/thdhyan/k1-rl-mj).
 | `tasks_carry2.py` | Box carry v2: no weld. The box is a free, colliding body held only by the forearm stubs squeezing its sides. |
 | `tasks_carry_vel.py` | Carry a free box of varying mass under a velocity command: residual layer on the frozen walk base. |
 | `tasks_getup.py` | Get-up: from lying (prone, supine, side) or a random tumble back to the HOME stand, all 22 joints. |
+| `tasks_getup_bent.py` | Get-up with a bent-elbow goal: ``Mjlab-GetUpBent-Booster-K1``. |
 | `tasks_head.py` | Head tracking (port of Isaac Lab `Isaac-HeadTrack-K1-v0`) on mjlab: the head layer of the HRL stack. |
 | `tasks_jump.py` | Jump in place on the K1 (Mjlab-Jump-Booster-K1). Method follows Olsen 2025; see docs/k1_jump_strategies.md. |
 | `tasks_kick.py` | Kick task (port of Isaac Lab `Isaac-Kick-*`) on mjlab: the first HRL task layer. |

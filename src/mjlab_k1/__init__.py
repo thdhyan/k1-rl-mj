@@ -161,3 +161,10 @@ from .tasks_kick_strike import kick_strike_env_cfg  # noqa: E402
 register_mjlab_task(
   task_id="Mjlab-KickStrike-Booster-K1", env_cfg=kick_strike_env_cfg(), play_env_cfg=kick_strike_env_cfg(play=True),
   rl_cfg=k1_task_ppo_cfg("k1_kick_strike"), runner_cls=MjlabOnPolicyRunner)
+
+from .tasks_getup_bent import getup_bent_env_cfg  # noqa: E402
+
+register_mjlab_task(
+  task_id="Mjlab-GetUpBent-Booster-K1", env_cfg=getup_bent_env_cfg(), play_env_cfg=getup_bent_env_cfg(play=True),
+  rl_cfg=replace(k1_ppo_runner_cfg(), experiment_name="k1_getup_bent", max_iterations=6_000),
+  runner_cls=MjlabOnPolicyRunner)
